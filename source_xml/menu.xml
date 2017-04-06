@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Menu>
+    <Dish>
+        <id>1</id>
+        <Name>Рулет с изюмом</Name>
+        <Weight>75</Weight>
+        <Price>15</Price>
+    </Dish>
+    <Dish>
+		<id>2</id>
+        <Name>Пирог с повидлом</Name>
+        <Weight>60</Weight>
+        <Price>13</Price>
+    </Dish>
+    <Dish>
+		<id>3</id>
+        <Name>Пирог с яблоками</Name>
+        <Weight>60</Weight>
+        <Price>13</Price>
+    </Dish>
+    <Dish>
+		<id>4</id>
+        <Name>Салат Изюминка</Name>
+        <Weight>100</Weight>
+        <Price>35</Price>
+    </Dish>
+    <Dish>
+		<id>5</id>
+        <Name>Салат Лукошко</Name>
+        <Weight>100</Weight>
+        <Price>40</Price>
+    </Dish>
+    <Dish>
+		<id>6</id>
+        <Name>Салат Капустный с помидором</Name>
+        <Weight>100</Weight>
+        <Price>19</Price>
+    </Dish>
+    <Dish>
+		<id>7</id>
+        <Name>Суп харчо с говядиной</Name>
+        <Weight>250</Weight>
+        <Price>31</Price>
+    </Dish>
+    <Dish>
+		<id>8</id>
+        <Name>Суп куриный с грибами</Name>
+        <Weight>250</Weight>
+        <Price>34</Price>
+    </Dish>
+    <Dish>
+		<id>9</id>
+        <Name>Суп болгарский вегетарианский</Name>
+        <Weight>250</Weight>
+        <Price>21</Price>
+    </Dish>
+    <Dish>
+		<id>10</id>
+        <Name>Рыбное филе с помидоркой</Name>
+        <Weight>80</Weight>
+        <Price>54</Price>
+    </Dish>
+    <Dish>
+		<id>11</id>
+        <Name>Печень  по королевски</Name>
+        <Weight>150</Weight>
+        <Price>54</Price>
+    </Dish>
+    <Dish>
+		<id>12</id>
+        <Name>Свинина запеченная"По-гусарски"</Name>
+        <Weight>80</Weight>
+        <Price>68</Price>
+    </Dish>
+    <Dish>
+		<id>13</id>
+        <Name>Греча с маслом</Name>
+        <Weight>170</Weight>
+        <Price>17</Price>
+    </Dish>
+    <Dish>
+		<id>14</id>
+        <Name>Макароны отварные</Name>
+        <Weight>170</Weight>
+        <Price>15</Price>
+    </Dish>
+    <Dish>
+		<id>15</id>
+        <Name>Рис отварной с маслом</Name>
+        <Weight>170</Weight>
+        <Price>16</Price>
+    </Dish>
+</Menu>

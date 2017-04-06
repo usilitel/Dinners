@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Clients>
+    <Client>
+		<id>1</id>
+        <Name>Пупкин А.</Name>
+    </Client>
+    <Client>
+		<id>2</id>
+        <Name>Кривенко С.</Name>
+    </Client>
+    <Client>
+		<id>3</id>
+        <Name>Гайченов П.</Name>
+    </Client>
+    <Client>
+		<id>4</id>
+        <Name>Сухожилов Л.</Name>
+    </Client>
+</Clients>
