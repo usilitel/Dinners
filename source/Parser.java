@@ -14,12 +14,17 @@ import java.io.IOException;
  * Разбираем исходные xml-файлы и записываем их содержимое в массивы
  */
 public class Parser {
+    private Main main; // ссылка на главный объект программы
+
+    public Parser(Main main){
+        this.main = main;
+    }
 
     /**
      * заполняем массив menu
      * @param fileName - название исходного файла
      */
-    public static void parseMenu(String fileName) {
+    public void parseMenu(String fileName) {
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -46,7 +51,7 @@ public class Parser {
                         if (dishProp.getNodeName() == "Weight") { dishWeight = Float.parseFloat(dishProp.getChildNodes().item(0).getTextContent()); }
                         if (dishProp.getNodeName() == "Price") { dishPrice = Float.parseFloat(dishProp.getChildNodes().item(0).getTextContent()); }
                     }
-                    Main.menu.put(dishId, new Dish(dishId, dishName, dishWeight, dishPrice));
+                    this.main.menu.put(dishId, new Dish(dishId, dishName, dishWeight, dishPrice));
                 }
             }
         } catch (ParserConfigurationException ex) {
@@ -63,7 +68,7 @@ public class Parser {
      * заполняем массив clientList
      * @param fileName - название исходного файла
      */
-    public static void parseClients(String fileName) {
+    public void parseClients(String fileName) {
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -87,7 +92,7 @@ public class Parser {
                         if (dishProp.getNodeName() == "id") { clientId = Integer.parseInt(dishProp.getChildNodes().item(0).getTextContent()); }
                         if (dishProp.getNodeName() == "Name") { clientName = (dishProp.getChildNodes().item(0).getTextContent()); }
                     }
-                    Main.clientList.put(clientId, new Client(clientId, clientName));
+                    this.main.clientList.put(clientId, new Client(clientId, clientName));
                 }
             }
         } catch (ParserConfigurationException ex) {
@@ -105,7 +110,7 @@ public class Parser {
      * заполняем массив orders
      * @param fileName - название исходного файла
      */
-    public static void parseOrders(String fileName) {
+    public void parseOrders(String fileName) {
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -127,7 +132,7 @@ public class Parser {
                         if (orderProp.getNodeName() == "ClientId") { clientId = Integer.parseInt(orderProp.getChildNodes().item(0).getTextContent()); }
                         if (orderProp.getNodeName() == "DishId") { dishId = Integer.parseInt(orderProp.getChildNodes().item(0).getTextContent()); }
                     }
-                    Main.orderList.add(new Order(clientId, dishId)); // добавляем блюдо в заказ клиента
+                    this.main.orderList.add(new Order(clientId, dishId)); // добавляем блюдо в заказ клиента
                 }
             }
 

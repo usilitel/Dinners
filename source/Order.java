@@ -10,7 +10,7 @@ public class Order {
     private Integer dishId;
 
 
-    Order(int clientId, int dishId) {
+    public Order(int clientId, int dishId) {
         this.clientId = clientId;
         this.dishId = dishId;
     }

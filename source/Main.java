@@ -1,29 +1,39 @@
 package ru.lesson.lessons.Dinners.source;
 
+
+import java.util.HashMap;
+
 /**
  * главный класс программы
  *
  */
 public class Main {
-    static public Menu menu;
-    static public ClientList clientList;
-    static public OrderList orderList;
+    //public HashMap<Integer, Dish> menu; // реализация меню без использования отдельного класса
+    //public HashMap<Integer, Client> clientList; // реализация списка клиентов без использования отдельного класса
+    public Menu menu;
+    public ClientList clientList;
+
+    public OrderList orderList;
+    private Parser parser;
 
 
     public static void main(String[] args) {
         Main dinnersMain = new Main();
     }
 
-    Main(){
+    private Main(){
+        //menu = new HashMap<Integer, Dish>(); // реализация меню без использования отдельного класса
+        //clientList = new HashMap<Integer, Client>(); // реализация списка клиентов без использования отдельного класса
         menu = new Menu();
         clientList = new ClientList();
-        orderList = new OrderList();
+        orderList = new OrderList(this);
+        parser = new Parser(this);
 
-        Parser.parseMenu("source_xml/menu.xml"); // заполняем массив menu из файла menu.xml
-        Parser.parseClients("source_xml/clients.xml"); // заполняем массив clientList из файла clients.xml
-        Parser.parseOrders("source_xml/orders.xml"); // заполняем массив orders из файла orders.xml
+        parser.parseMenu("source_xml/menu.xml"); // заполняем массив menu из файла menu.xml
+        parser.parseClients("source_xml/clients.xml"); // заполняем массив clientList из файла clients.xml
+        parser.parseOrders("source_xml/orders.xml"); // заполняем массив orders из файла orders.xml
 
         orderList.printOrders(); // печатаем первый отчет (для отправки заказа в столовую)
-        orderList.printOrdersClients(); // печатаем второй отчет (я раздачи заказанных блюд сотрудникам)
+        orderList.printOrdersClients(); // печатаем второй отчет (для раздачи заказанных блюд сотрудникам)
     }
 }
